@@ -3,52 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LGCodes - Orçamento e Tabela de Preços</title>
+    <title>LGCodes - Criação de Sites</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>LGCodes - Tabela de Preços e Solicitação de Orçamento</h1>
+        <h1>Bem-vindo à LGCodes</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#precos">Preços</a>
+            <a href="#orcamento">Orçamento</a>
+        </nav>
     </header>
-
-    <section class="pricing-table">
-        <div class="pricing-card" id="padrao">
-            <h2>Padrão</h2>
-            <p class="price">R$ 500,00</p>
-            <p class="description">Fazemos um site de acordo com suas informações fornecidas, porém o layout pode não ser dos melhores.</p>
-        </div>
-
-        <div class="pricing-card" id="avancado">
-            <h2>Avançado</h2>
-            <p class="price">R$ 1000,00</p>
-            <p class="description">Faremos um layout legal para seu site e um site de acordo com as informações fornecidas.</p>
-        </div>
-
-        <div class="pricing-card" id="estiloso">
-            <h2>Estiloso</h2>
-            <p class="price">R$ 1500,00</p>
-            <p class="description">Faremos o melhor layout possível e o melhor site possível com as informações fornecidas.</p>
-        </div>
+    
+    <section id="sobre">
+        <h2>Sobre a LGCodes</h2>
+        <p>A LGCodes é especializada na criação de sites usando o GitHub e oferecendo layouts customizados. Nossa equipe trabalha para entregar soluções personalizadas que atendam às necessidades específicas de cada cliente, garantindo um design funcional e estético.</p>
     </section>
 
-    <section class="quote-form">
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <p><strong>Serviço Padrão:</strong> Criamos um site baseado nas informações fornecidas, com um layout básico.</p>
+        <p><strong>Serviço Avançado:</strong> Criamos um layout mais elaborado e um site de acordo com suas informações.</p>
+        <p><strong>Serviço Estiloso:</strong> Criamos o melhor layout possível e um site altamente personalizado.</p>
+    </section>
+
+    <section id="precos">
+        <h2>Tabela de Preços</h2>
+        <table>
+            <tr>
+                <th>Serviço</th>
+                <th>Preço</th>
+            </tr>
+            <tr class="preco-item" data-servico="padrão">
+                <td>Serviço Padrão</td>
+                <td>R$1000</td>
+            </tr>
+            <tr class="preco-item" data-servico="avançado">
+                <td>Serviço Avançado</td>
+                <td>R$2000</td>
+            </tr>
+            <tr class="preco-item" data-servico="estiloso">
+                <td>Serviço Estiloso</td>
+                <td>R$3000</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="orcamento">
         <h2>Solicitar Orçamento</h2>
-        <form action="send_email.php" method="post">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="tel" name="telefone" placeholder="Seu Telefone" required>
-            <textarea name="mensagem" placeholder="Descreva o serviço desejado" required></textarea>
-            <select name="servico" required>
-                <option value="padrao">Padrão - R$ 500,00</option>
-                <option value="avancado">Avançado - R$ 1000,00</option>
-                <option value="estiloso">Estiloso - R$ 1500,00</option>
+        <form id="orcamento-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="servico">Serviço Desejado:</label>
+            <select id="servico" name="servico">
+                <option value="padrão">Padrão</option>
+                <option value="avançado">Avançado</option>
+                <option value="estiloso">Estiloso</option>
             </select>
-            <button type="submit">Enviar Orçamento</button>
+            
+            <label for="descricao">Descrição do Projeto:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+            
+            <button type="submit">Enviar</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2024 LGCodes. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
