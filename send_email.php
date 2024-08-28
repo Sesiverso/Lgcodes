@@ -3,27 +3,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
+    $mensagem = $_POST['mensagem'];
     $servico = $_POST['servico'];
-    $descricao = $_POST['descricao'];
-    $orcamento = $_POST['orcamento'];
 
     $to = "luizguilhermevalentinereis@gmail.com";
-    $subject = "Novo Orçamento Recebido - LGCodes";
-    $message = "
-    Nome: $nome\n
-    Email: $email\n
-    Telefone: $telefone\n
-    Serviço Desejado: $servico\n
-    Descrição do Projeto: $descricao\n
-    Orçamento Estimado: R$$orcamento\n
+    $subject = "Novo Orçamento Recebido - $servico";
+    $body = "
+        Nome: $nome\n
+        E-mail: $email\n
+        Telefone: $telefone\n
+        Serviço Escolhido: $servico\n
+        Mensagem:\n$mensagem
     ";
     $headers = "From: $email";
 
-    // Função para enviar o email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "<h2>Orçamento enviado com sucesso!</h2>";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Orçamento enviado com sucesso!";
     } else {
-        echo "<h2>Erro ao enviar o orçamento. Tente novamente mais tarde.</h2>";
+        echo "Erro ao enviar orçamento. Tente novamente mais tarde.";
     }
+} else {
+    echo "Método de requisição inválido.";
 }
 ?>
