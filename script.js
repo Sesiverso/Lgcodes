@@ -1,7 +1,8 @@
-emailjs.init("7mn4fzN7hjmzs5knD"); // Substitua pelo seu chave pública
+emailjs.init("7mn4fzN7hjmzs5knD"); // Substitua pela sua chave pública
 
 document.getElementById('orcamento-form').addEventListener('submit', function(event) {
     event.preventDefault();
+    
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
     const servico = document.getElementById('servico').value;
@@ -16,6 +17,7 @@ document.getElementById('orcamento-form').addEventListener('submit', function(ev
     .then(function(response) {
         alert('Orçamento enviado com sucesso!');
     }, function(error) {
+        console.error('Erro ao enviar o orçamento:', error);
         alert('Ocorreu um erro ao enviar o orçamento.');
     });
 });
