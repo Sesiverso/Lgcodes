@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela de Preços - LGCodes</title>
+    <title>LGCodes - Orçamento e Tabela de Preços</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Tabela de Preços</h1>
+        <h1>LGCodes - Tabela de Preços e Solicitação de Orçamento</h1>
     </header>
 
     <section class="pricing-table">
@@ -21,14 +21,30 @@
         <div class="pricing-card" id="avancado">
             <h2>Avançado</h2>
             <p class="price">R$ 1000,00</p>
-            <p class="description">Faremos um layout Legal para seu site e um site de acordo com as informações fornecidas.</p>
+            <p class="description">Faremos um layout legal para seu site e um site de acordo com as informações fornecidas.</p>
         </div>
 
         <div class="pricing-card" id="estiloso">
             <h2>Estiloso</h2>
             <p class="price">R$ 1500,00</p>
-            <p class="description">Faremos o melhor Layout possível e o melhor site possível com as informações fornecidas.</p>
+            <p class="description">Faremos o melhor layout possível e o melhor site possível com as informações fornecidas.</p>
         </div>
+    </section>
+
+    <section class="quote-form">
+        <h2>Solicitar Orçamento</h2>
+        <form action="send_email.php" method="post">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <input type="tel" name="telefone" placeholder="Seu Telefone" required>
+            <textarea name="mensagem" placeholder="Descreva o serviço desejado" required></textarea>
+            <select name="servico" required>
+                <option value="padrao">Padrão - R$ 500,00</option>
+                <option value="avancado">Avançado - R$ 1000,00</option>
+                <option value="estiloso">Estiloso - R$ 1500,00</option>
+            </select>
+            <button type="submit">Enviar Orçamento</button>
+        </form>
     </section>
 
     <footer>
