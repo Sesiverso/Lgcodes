@@ -5,83 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LGCodes - Criação de Sites</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script>
-        emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pelo seu chave pública
+        (function(){
+            emailjs.init("7mn4fzN7hjmzs5knD");
+        })();
     </script>
 </head>
 <body>
     <header>
         <h1>Bem-vindo à LGCodes</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#precos">Preços</a>
-            <a href="#orcamento">Orçamento</a>
-        </nav>
+        <p>Especialistas em criação de sites modernos e responsivos</p>
     </header>
     
-    <section id="sobre">
-        <h2>Sobre a LGCodes</h2>
-        <p>A LGCodes é especializada na criação de sites usando o GitHub e oferecendo layouts customizados. Nossa equipe trabalha para entregar soluções personalizadas que atendam às necessidades específicas de cada cliente, garantindo um design funcional e estético.</p>
+    <section id="squares">
+        <div class="square">Serviço 1</div>
+        <div class="square">Serviço 2</div>
+        <div class="square">Serviço 3</div>
+        <div class="square">Serviço 4</div>
     </section>
-
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
-        <p><strong>Serviço Padrão:</strong> Criamos um site baseado nas informações fornecidas, com um layout básico.</p>
-        <p><strong>Serviço Avançado:</strong> Criamos um layout mais elaborado e um site de acordo com suas informações.</p>
-        <p><strong>Serviço Estiloso:</strong> Criamos o melhor layout possível e um site altamente personalizado.</p>
-    </section>
-
-    <section id="precos">
-        <h2>Tabela de Preços</h2>
-        <table>
-            <tr>
-                <th>Serviço</th>
-                <th>Preço</th>
-            </tr>
-            <tr class="preco-item" data-servico="padrão">
-                <td>Serviço Padrão</td>
-                <td>R$1000</td>
-            </tr>
-            <tr class="preco-item" data-servico="avançado">
-                <td>Serviço Avançado</td>
-                <td>R$2000</td>
-            </tr>
-            <tr class="preco-item" data-servico="estiloso">
-                <td>Serviço Estiloso</td>
-                <td>R$3000</td>
-            </tr>
-        </table>
-    </section>
-
-    <section id="orcamento">
-        <h2>Solicitar Orçamento</h2>
-        <form id="orcamento-form">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="servico">Serviço Desejado:</label>
-            <select id="servico" name="servico">
-                <option value="padrão">Padrão</option>
-                <option value="avançado">Avançado</option>
-                <option value="estiloso">Estiloso</option>
-            </select>
-            
-            <label for="descricao">Descrição do Projeto:</label>
-            <textarea id="descricao" name="descricao" required></textarea>
-            
+    
+    <section id="contact">
+        <h2>Entre em Contato</h2>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Seu Nome" required>
+            <input type="email" name="user_email" placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </section>
 
-    <footer>
-        <p>&copy; 2024 LGCodes. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
