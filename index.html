@@ -7,33 +7,51 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script>
-        (function(){
-            emailjs.init("7mn4fzN7hjmzs5knD");
+        (function() {
+            emailjs.init("SUA_CHAVE_PUBLICA_EMAILJS");
         })();
     </script>
 </head>
 <body>
     <header>
-        <h1>Bem-vindo à LGCodes</h1>
-        <p>Especialistas em criação de sites modernos e responsivos</p>
+        <div class="header-content">
+            <h1>LGCodes</h1>
+            <p>Transformamos suas ideias em websites incríveis</p>
+        </div>
     </header>
-    
-    <section id="squares">
-        <div class="square">Serviço 1</div>
-        <div class="square">Serviço 2</div>
-        <div class="square">Serviço 3</div>
-        <div class="square">Serviço 4</div>
+
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Padrão</h3>
+                <p>Fazemos um site de acordo com suas informações fornecidas, porém o layout pode não ser dos melhores.</p>
+            </div>
+            <div class="card">
+                <h3>Avançado</h3>
+                <p>Faremos um layout legal para seu site e um site de acordo com as informações fornecidas.</p>
+            </div>
+            <div class="card">
+                <h3>Estiloso</h3>
+                <p>Faremos o melhor layout possível e o melhor site possível com as informações fornecidas.</p>
+            </div>
+        </div>
     </section>
-    
+
     <section id="contact">
-        <h2>Entre em Contato</h2>
+        <h2>Solicite um Orçamento</h2>
         <form id="contact-form">
             <input type="text" name="user_name" placeholder="Seu Nome" required>
             <input type="email" name="user_email" placeholder="Seu Email" required>
-            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <textarea name="message" placeholder="Descreva seu projeto" required></textarea>
+            <input type="number" name="budget" placeholder="Orçamento estimado (R$)" required>
             <button type="submit">Enviar</button>
         </form>
     </section>
+
+    <footer>
+        <p>&copy; 2024 LGCodes. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
