@@ -3,8 +3,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
     emailjs.sendForm('service_odoytvp', 'template_fg9ijtm', this)
         .then(function() {
-            alert('Mensagem enviada com sucesso!');
+            alert('Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.');
         }, function(error) {
-            alert('Ocorreu um erro ao enviar sua mensagem, tente novamente.');
+            alert('Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.');
         });
 });
