@@ -1,68 +1,92 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e9ecef;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background-image: linear-gradient(to right, #007bff, #6610f2);
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
 }
 
-#squares {
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#services, #contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #007bff;
+}
+
+.service-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 2rem 0;
+    gap: 1.5rem;
 }
 
-.square {
-    width: 200px;
-    height: 200px;
-    background-color: #007bff;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    transition: transform 0.3s, background-color 0.3s;
-    cursor: pointer;
-}
-
-.square:hover {
-    transform: scale(1.1);
-    background-color: #0056b3;
-}
-
-#contact {
-    background-color: white;
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
     padding: 2rem;
-    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 input, textarea {
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 button {
-    padding: 0.5rem;
+    padding: 0.75rem 2rem;
     font-size: 1rem;
+    color: #ffffff;
     background-color: #007bff;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -71,4 +95,12 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6c757d;
 }
